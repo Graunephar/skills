@@ -26,7 +26,7 @@ Det originale repo implementerer et tre-agent-system (orchestrator, architect, s
 - **8-sektion valideringsrapport** — Verdict (GOOD/NEEDS MAJOR WORK/BAD), styrker, kritiske svagheder, blindspots, omformulering, success criteria, vej frem, åbne spørgsmål
 - **Antagelsesanalyse** — fem kategorier (timeline, ressourcer, teknisk, business, eksternt) med konkrete challenge-mønstre og wishful-thinking-indikatorer
 - **25 navngivne anti-mønstre** fordelt på arkitektur, timeline, team, teknologi og process
-- **Clarification protocol** — challenge-mode frem for interview-mode, max 2-3 spørgsmål, eksempel-svar
+- **Clarification protocol** — challenge-mode frem for interview-mode (omskrevet til grill-me-mekanik, se nedenfor)
 - **Syv-dimensions evaluering** — forretning, teknik, operation, finans, timeline, team, marked
 - **Arkitekturmønster-selector** med beslutningskriterier for monolith/microservices/serverless
 - **Fire-fase skaleringsguide** — 0-10K / 10K-100K / 100K-1M / 1M+ brugere
@@ -34,6 +34,9 @@ Det originale repo implementerer et tre-agent-system (orchestrator, architect, s
 ---
 
 ## Hvad der er ændret og tilføjet
+
+### Grill-me-mekanik som default (vigtigste ændring)
+Hvor originalen leverer analyse/rapporter i ét skud, er denne version omskrevet til at *forhøre* — inspireret af `grill-me`-skillen. Default-adfærden er: ét spørgsmål ad gangen, accepterer ikke vage svar, borer videre i samme punkt til antagelsen er resolveret, går ned ad hver gren i beslutningstræet, og konkluderer først når forhøret er færdigt. Tonen er benhård men fair — angriber argumentet, ikke personen, og anerkender klart når noget er stærkt. Valideringsrapporten er nu *slutproduktet* af et forhør, ikke et førstesvar.
 
 ### Teknologiagnostisk tilgang
 Originalen har eksplicit fokus på web/mobile/ML-stacks (React, Node.js, Kubernetes osv.). Denne version spørger altid om kontekst og nuværende stack inden den anbefaler noget — og undgår at anbefale specifikke teknologier uden at kende constraints.
