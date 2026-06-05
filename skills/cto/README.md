@@ -67,6 +67,7 @@ Tilføjet et lag af konkret engineering-disciplin, der ikke var i originalen —
 - **Dave Farley** — software engineering som empirisk disciplin, testbarhed som design-redskab, Definition of Done = deployet, CI som disciplin (trunk-based, ikke feature branches), DORA-metrikker, "vi kan ikke lave CD fordi..."-undskyldninger
 - **Martin Fowler** — Monolith First (start simpelt, ekstrahér services når smerten er reel), Evolutionary Architecture (inkrementel ændring, fitness functions, last responsible moment), ADRs som lightweight dokumenter i version control
 - **Paul Graham** — Make Something People Want, Startup = Growth (startup som søgen efter forretningsmodel, ikke bygningsopgave), Do Things That Don't Scale (manuelt arbejde og u-skalerbar brugerglæde frem for prematur automatisering)
+- **Eric Ries** — Build → Measure → Learn og valideret læring som output; den centrale heuristik "hvilken løsning giver mest læring pr. udviklingstime?" (bevidst ikke MVP-begrebet, som allerede er dækket)
 - **ADRs** — arkitekturbeslutninger som levende dokumenter med "genovervejes-by"-trigger
 - **GDPR / data-residency** — læg ikke databasen i USA; one-way door der er billig at gøre rigtigt fra start og dyr at rette senere
 
@@ -99,6 +100,7 @@ Bevidst udeladt som corporate (ingen værdi i pre-startup): koordinationsomkostn
 - [Paul Graham — Do Things That Don't Scale](https://paulgraham.com/ds.html)
 - [Paul Graham — Startup = Growth](https://paulgraham.com/growth.html)
 - [Paul Graham — essays (alle)](https://paulgraham.com/articles.html)
+- [Eric Ries — The Lean Startup](http://theleanstartup.com/principles) (Build → Measure → Learn, valideret læring, pivot or persevere)
 
 ### Compliance
 - [GDPR — data-overførsler til tredjelande (EU-Kommissionen)](https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection_en)
