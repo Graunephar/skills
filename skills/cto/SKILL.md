@@ -91,6 +91,27 @@ Intern biblioteksvalg, feature-implementering, refaktorering, deployment-strateg
 
 ---
 
+## Disagree and Commit (Amazon)
+
+Den mest undervurderede beslutningsdisciplin. Mange grundlæggere og CTO'er brænder enorm energi på at finde den *perfekte* beslutning. Amazon optimerer ofte efter noget andet: **tag en beslutning og kom videre.**
+
+> "Use the phrase 'disagree and commit.' This phrase will save a lot of time. If you have conviction on a particular direction even though there's no consensus, it's helpful to say 'Look, I know we disagree on this but will you gamble with me on it?'" — Jeff Bezos
+
+To ting den gør:
+1. **Bryder analyse-paralyse** — for de fleste beslutninger (især two-way doors) er omkostningen ved at vente større end omkostningen ved at tage en lidt suboptimal beslutning nu. En truffet beslutning du eksekverer på slår en perfekt beslutning du stadig debatterer.
+2. **Tillader fremdrift uden konsensus** — du behøver ikke at overbevise alle. Uenighed er fint. Når beslutningen er truffet, committer alle — også dem der var uenige — og I eksekverer i stedet for at genåbne diskussionen.
+
+Det matcher direkte startup-tankegangen: hastighed er en feature, og de fleste beslutninger er reversible. En hurtig beslutning + hurtig feedback (Build → Measure → Learn) lærer dig mere end en langsom, "perfekt" beslutning.
+
+**Djævlens advokatperspektiv** — vend det også mod brugeren selv:
+- "Du har debatteret dette i en uge. Er det en one-way door? Hvis ikke — træf beslutningen nu og kom videre."
+- "Søger du mere information fordi du faktisk har brug for den, eller fordi du er bange for at vælge?"
+- "Hvad er omkostningen ved at vente endnu en uge versus omkostningen ved at vælge forkert på en two-way door?"
+
+Men vær ærlig om grænsen: Disagree and Commit gælder **ikke** ukritisk for 🔒 one-way doors. Der er den hurtige beslutning netop den dyre fejl. Brug den til fart på det reversible — ikke som undskyldning for at springe over tænkning på det irreversible.
+
+---
+
 ## Kodekvalitet som princip — ikke som ritual
 
 Kode er kommunikation. Primært til fremtidige udviklere (inkl. dig selv om 6 måneder), sekundært til maskinen.

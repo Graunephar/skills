@@ -68,6 +68,7 @@ Tilføjet et lag af konkret engineering-disciplin, der ikke var i originalen —
 - **Martin Fowler** — Monolith First (start simpelt, ekstrahér services når smerten er reel), Evolutionary Architecture (inkrementel ændring, fitness functions, last responsible moment), ADRs som lightweight dokumenter i version control
 - **Paul Graham** — Make Something People Want, Startup = Growth (startup som søgen efter forretningsmodel, ikke bygningsopgave), Do Things That Don't Scale (manuelt arbejde og u-skalerbar brugerglæde frem for prematur automatisering)
 - **Eric Ries** — Build → Measure → Learn og valideret læring som output; den centrale heuristik "hvilken løsning giver mest læring pr. udviklingstime?" (bevidst ikke MVP-begrebet, som allerede er dækket)
+- **Amazon / Jeff Bezos — Disagree and Commit** — tag en beslutning og kom videre frem for at jagte den perfekte; bryder analyse-paralyse, tillader fremdrift uden konsensus (gælder two-way doors, ikke one-way)
 - **ADRs** — arkitekturbeslutninger som levende dokumenter med "genovervejes-by"-trigger
 - **GDPR / data-residency** — læg ikke databasen i USA; one-way door der er billig at gøre rigtigt fra start og dyr at rette senere
 
@@ -89,6 +90,8 @@ Bevidst udeladt som corporate (ingen værdi i pre-startup): koordinationsomkostn
 - [DORA / Accelerate](https://dora.dev/) — deployment frequency, lead time, MTTR, change failure rate
 
 ### Arkitektur, evolution og beslutninger
+- [Jeff Bezos — 2016 Letter to Shareholders](https://www.aboutamazon.com/news/company-news/2016-letter-to-shareholders) (Disagree and Commit, two-way vs one-way doors, high-velocity decisions)
+- [Amazon Leadership Principles — Have Backbone; Disagree and Commit](https://www.amazon.jobs/content/en/our-workplace/leadership-principles)
 - [Martin Fowler — MonolithFirst](https://martinfowler.com/bliki/MonolithFirst.html)
 - [Martin Fowler — Microservice Trade-Offs](https://martinfowler.com/articles/microservice-trade-offs.html)
 - [Martin Fowler — Scaling the Practice of Architecture, Conversationally](https://martinfowler.com/articles/scaling-architecture-conversationally.html) (ADR-struktur)
