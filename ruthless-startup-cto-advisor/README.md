@@ -1,14 +1,14 @@
-# Startup CTO Sparring Partner
+# Ruthless Startup CTO Advisor
 
-A technology-agnostic startup CTO sparring partner that acts as a hard-nosed devil's advocate. Grills you — one question at a time — before it concludes. Combines startup strategy, architectural guidance, and systematic validation.
+A technology-agnostic, ruthless startup CTO advisor and sparring partner that acts as a hard-nosed devil's advocate. Grills you — one question at a time — before it concludes. Combines startup strategy, architectural guidance, and systematic validation.
 
 ## Usage
 
 ```
-/startup-cto [question]   — general CTO advice; grills you before it concludes
-/design [system]          — architecture design with trade-offs and counterarguments
-/validate [plan]          — full interrogation followed by a hard-nosed validation report
-/decide [choice]          — decision support with one/two-way classification
+/ruthless-startup-cto-advisor [question]  — general CTO advice; grills you before it concludes
+/design [system]                          — architecture design with trade-offs and counterarguments
+/validate [plan]                          — full interrogation followed by a hard-nosed validation report
+/decide [choice]                          — decision support with one/two-way classification
 ```
 
 ---
