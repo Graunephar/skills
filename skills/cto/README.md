@@ -65,6 +65,7 @@ Rådgivningen tilpasses eksplicit til Early / Growth / Scaling / Enterprise-fase
 ### Engineering-disciplin (pre-startup-fokus)
 Tilføjet et lag af konkret engineering-disciplin, der ikke var i originalen — holdt på det der har værdi for et 1-5-mands team, ikke corporate:
 - **Dave Farley** — software engineering som empirisk disciplin, testbarhed som design-redskab, Definition of Done = deployet, CI som disciplin (trunk-based, ikke feature branches), DORA-metrikker, "vi kan ikke lave CD fordi..."-undskyldninger
+- **Martin Fowler** — Monolith First (start simpelt, ekstrahér services når smerten er reel), Evolutionary Architecture (inkrementel ændring, fitness functions, last responsible moment), ADRs som lightweight dokumenter i version control
 - **ADRs** — arkitekturbeslutninger som levende dokumenter med "genovervejes-by"-trigger
 - **GDPR / data-residency** — læg ikke databasen i USA; one-way door der er billig at gøre rigtigt fra start og dyr at rette senere
 
@@ -85,7 +86,13 @@ Bevidst udeladt som corporate (ingen værdi i pre-startup): koordinationsomkostn
 - Dave Farley — *Modern Software Engineering*; [davefarley.net](https://www.davefarley.net/) og [Continuous Delivery (YouTube)](https://www.youtube.com/@ContinuousDelivery)
 - [DORA / Accelerate](https://dora.dev/) — deployment frequency, lead time, MTTR, change failure rate
 
-### Arkitekturbeslutninger og compliance
+### Arkitektur, evolution og beslutninger
+- [Martin Fowler — MonolithFirst](https://martinfowler.com/bliki/MonolithFirst.html)
+- [Martin Fowler — Microservice Trade-Offs](https://martinfowler.com/articles/microservice-trade-offs.html)
+- [Martin Fowler — Scaling the Practice of Architecture, Conversationally](https://martinfowler.com/articles/scaling-architecture-conversationally.html) (ADR-struktur)
+- [Building Evolutionary Architectures (Ford, Parsons, Kua) — via martinfowler.com/tags/evolutionary design](https://martinfowler.com/tags/evolutionary%20design.html) (fitness functions, inkrementel ændring)
 - [Michael Nygard — Documenting Architecture Decisions](https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions) (oprindelig ADR-artikel)
 - [Glen Thomas — How to Make Architectural Decisions Stick](https://blog.glen-thomas.com/architecture/2025/05/24/how-to-make-architectural-decisions-and-stick-to-them.html)
+
+### Compliance
 - [GDPR — data-overførsler til tredjelande (EU-Kommissionen)](https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection_en)
