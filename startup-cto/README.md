@@ -1,112 +1,112 @@
 # Startup CTO Sparring Partner
 
-En teknologiagnostisk startup-CTO-sparringspartner der fungerer som benhård djævlens advokat. Griller dig — ét spørgsmål ad gangen — før den konkluderer. Kombinerer startup-strategi, arkitekturvejledning og systematisk validering.
+A technology-agnostic startup CTO sparring partner that acts as a hard-nosed devil's advocate. Grills you — one question at a time — before it concludes. Combines startup strategy, architectural guidance, and systematic validation.
 
-## Brug
+## Usage
 
 ```
-/startup-cto [spørgsmål]  — generel CTO-rådgivning; griller dig før den konkluderer
-/design [system]          — arkitekturdesign med trade-offs og modargumenter
-/validate [plan]          — fuldt forhør efterfulgt af benhård valideringsrapport
-/decide [valg]            — beslutningsstøtte med one/two-way klassificering
+/startup-cto [question]   — general CTO advice; grills you before it concludes
+/design [system]          — architecture design with trade-offs and counterarguments
+/validate [plan]          — full interrogation followed by a hard-nosed validation report
+/decide [choice]          — decision support with one/two-way classification
 ```
 
 ---
 
 ## Credits
 
-Denne skill er baseret på og kraftigt inspireret af **[claude-cto-team](https://github.com/alirezarezvani/claude-cto-team)** af [Alireza Rezvani](https://github.com/alirezarezvani), publiceret under MIT-licens.
+This skill is based on and heavily inspired by **[claude-cto-team](https://github.com/alirezarezvani/claude-cto-team)** by [Alireza Rezvani](https://github.com/alirezarezvani), published under the MIT license.
 
-Det originale repo implementerer et tre-agent-system (orchestrator, architect, strategic-cto-mentor) med 12 specialiserede skills.
-
----
-
-## Hvad der er bevaret fra originalen
-
-- **8-sektion valideringsrapport** — Verdict (GOOD/NEEDS MAJOR WORK/BAD), styrker, kritiske svagheder, blindspots, omformulering, success criteria, vej frem, åbne spørgsmål
-- **Antagelsesanalyse** — fem kategorier (timeline, ressourcer, teknisk, business, eksternt) med konkrete challenge-mønstre og wishful-thinking-indikatorer
-- **25 navngivne anti-mønstre** fordelt på arkitektur, timeline, team, teknologi og process
-- **Clarification protocol** — challenge-mode frem for interview-mode (omskrevet til grill-me-mekanik, se nedenfor)
-- **Syv-dimensions evaluering** — forretning, teknik, operation, finans, timeline, team, marked
-- **Arkitekturmønster-selector** med beslutningskriterier for monolith/microservices/serverless
-- **Fire-fase skaleringsguide** — 0-10K / 10K-100K / 100K-1M / 1M+ brugere
+The original repo implements a three-agent system (orchestrator, architect, strategic-cto-mentor) with 12 specialized skills.
 
 ---
 
-## Hvad der er ændret og tilføjet
+## What's kept from the original
 
-### Grill-me-mekanik som default (vigtigste ændring)
-Hvor originalen leverer analyse/rapporter i ét skud, er denne version omskrevet til at *forhøre* — inspireret af `grill-me`-skillen. Default-adfærden er: ét spørgsmål ad gangen, accepterer ikke vage svar, borer videre i samme punkt til antagelsen er resolveret, går ned ad hver gren i beslutningstræet, og konkluderer først når forhøret er færdigt. Tonen er benhård men fair — angriber argumentet, ikke personen, og anerkender klart når noget er stærkt. Valideringsrapporten er nu *slutproduktet* af et forhør, ikke et førstesvar.
-
-### Teknologiagnostisk tilgang
-Originalen har eksplicit fokus på web/mobile/ML-stacks (React, Node.js, Kubernetes osv.). Denne version spørger altid om kontekst og nuværende stack inden den anbefaler noget — og undgår at anbefale specifikke teknologier uden at kende constraints.
-
-### Djævlens advokat-grundholdning
-Originalen er analytisk og systematisk. Denne version udfordrer aktivt hvad brugeren siger — inspireret af `/grill-me`-skillens tilgang. Den accepterer ikke præmisser uden videre og præsenterer modargumenter.
-
-### One-Way vs Two-Way Doors som primært beslutningsprincip
-Klassificeringen (fra Jeff Bezos-rammen) er løftet frem som det centrale skel. Konkret: brug tid på teknologivalg (one-way), men hack gerne features sammen med gaffatape når arkitekturen er sund (two-way).
-
-### Kodekvalitet som princip (Uncle Bob / Dave Farley)
-Tilføjet eksplicit forankring i Clean Code (Robert C. Martin) og Modern Software Engineering (Dave Farley): læsbarhed som vedligeholdelsesomkostning, løs kobling som pragmatisk princip (ikke corporate ritual), testbarhed som designsignal.
-
-### Løs kobling — pragmatisk, ikke akademisk
-Fokus på hvad løs kobling faktisk løser i hverdagen: kan du ændre A uden at bryde B? Kan du teste forretningslogik uden en rigtig database? Uden den enterprise-abstraktionssnak der ikke giver mening i et lille team.
-
-### MVP og startup-tankegang
-Eksplicit rum til at springe over hvor gærdet er lavest — men med konkrete grænser for hvad der aldrig er acceptabelt (sikkerhed, ulæselig kode, one-way doors taget forkert).
-
-### Feature Creep som selvstændigt tema
-Tilføjet som eksplicit fokusområde: hvad det ser ud som, prisen, og konkrete spørgsmål der udfordrer scope-udvidelse.
-
-### Dansk sprogstøtte
-Svarer automatisk på det sprog brugeren skriver på.
-
-### Stage-awareness
-Rådgivningen tilpasses eksplicit til Early / Growth / Scaling / Enterprise-fasen.
-
-### Engineering-disciplin (pre-startup-fokus)
-Tilføjet et lag af konkret engineering-disciplin, der ikke var i originalen — holdt på det der har værdi for et 1-5-mands team, ikke corporate:
-- **Dave Farley** — software engineering som empirisk disciplin, testbarhed som design-redskab, Definition of Done = deployet, CI som disciplin (trunk-based, ikke feature branches), DORA-metrikker, "vi kan ikke lave CD fordi..."-undskyldninger
-- **Martin Fowler** — Monolith First (start simpelt, ekstrahér services når smerten er reel), Evolutionary Architecture (inkrementel ændring, fitness functions, last responsible moment), ADRs som lightweight dokumenter i version control
-- **Paul Graham** — Make Something People Want, Startup = Growth (startup som søgen efter forretningsmodel, ikke bygningsopgave), Do Things That Don't Scale (manuelt arbejde og u-skalerbar brugerglæde frem for prematur automatisering)
-- **Eric Ries** — Build → Measure → Learn og valideret læring som output; den centrale heuristik "hvilken løsning giver mest læring pr. udviklingstime?" (bevidst ikke MVP-begrebet, som allerede er dækket)
-- **Amazon / Jeff Bezos — Disagree and Commit** — tag en beslutning og kom videre frem for at jagte den perfekte; bryder analyse-paralyse, tillader fremdrift uden konsensus (gælder two-way doors, ikke one-way)
-- **ADRs** — arkitekturbeslutninger som levende dokumenter med "genovervejes-by"-trigger
-- **GDPR / data-residency** — læg ikke databasen i USA; one-way door der er billig at gøre rigtigt fra start og dyr at rette senere
-
-Bevidst udeladt som corporate (ingen værdi i pre-startup): koordinationsomkostninger på tværs af mange teams, observability/on-call-kultur, rewrite-vs-refactor-rammer, teknisk gæld oversat til executives, product/engineering-org-interface, og hiring-frameworks.
+- **8-section validation report** — Verdict (GOOD/NEEDS MAJOR WORK/BAD), strengths, critical weaknesses, blindspots, reframing, success criteria, path forward, open questions
+- **Assumption analysis** — five categories (timeline, resources, technical, business, external) with concrete challenge patterns and wishful-thinking indicators
+- **25 named anti-patterns** across architecture, timeline, team, technology, and process
+- **Clarification protocol** — challenge-mode over interview-mode (rewritten into the grill-me mechanic, see below)
+- **Seven-dimension evaluation** — business, technical, operational, financial, timeline, team, market
+- **Architecture-pattern selector** with decision criteria for monolith/microservices/serverless
+- **Four-stage scaling guide** — 0-10K / 10K-100K / 100K-1M / 1M+ users
 
 ---
 
-## Kilder
+## What's changed and added
 
-### Frameworks fra de oprindelige tre artikler
-- [One-Way vs Two-Way Doors](https://blueprints.guide/posts/one-way-vs-two-way-doors) — blueprints.guide (Bezos' beslutnings-reversibilitetsramme)
-- [Teknisk kviklånsgæld](https://responsen.substack.com/p/teknisk-kviklansgld) — Responsen (teknisk gæld som rovlån, sprint-procent-fælden)
-- [The CTO at Different Growth Stages](https://www.linkedin.com/pulse/cto-different-growth-stages-how-technical-leadership-karabedyants-turgf) — Karabedyants (stage-awareness-modellen)
+### Grill-me mechanic as default (most important change)
+Where the original delivers analysis/reports in one shot, this version is rewritten to *interrogate* — inspired by the `grill-me` skill. The default behavior is: one question at a time, never accepting vague answers, digging into the same point until the assumption is resolved, walking every branch of the decision tree, and concluding only once the interrogation is done. The tone is hard-nosed but fair — attacks the argument, not the person, and clearly acknowledges when something is strong. The validation report is now the *end product* of an interrogation, not a first response.
 
-### Kodekvalitet og engineering-disciplin
-- Robert C. Martin — *Clean Code* og *Clean Architecture*
+### Technology-agnostic approach
+The original explicitly focuses on web/mobile/ML stacks (React, Node.js, Kubernetes, etc.). This version always asks about context and the current stack before recommending anything — and avoids recommending specific technologies without knowing the constraints.
+
+### Devil's advocate core stance
+The original is analytical and systematic. This version actively challenges what the user says — inspired by the `/grill-me` skill's approach. It doesn't accept premises at face value and presents counterarguments.
+
+### One-Way vs Two-Way Doors as the primary decision principle
+The classification (from the Jeff Bezos framework) is elevated as the central distinction. Concretely: spend time on technology choices (one-way), but feel free to duct-tape features together when the architecture is sound (two-way).
+
+### Code quality as a principle (Uncle Bob / Dave Farley)
+Added explicit grounding in Clean Code (Robert C. Martin) and Modern Software Engineering (Dave Farley): readability as a maintenance cost, loose coupling as a pragmatic principle (not corporate ritual), testability as a design signal.
+
+### Loose coupling — pragmatic, not academic
+Focus on what loose coupling actually solves day to day: can you change A without breaking B? Can you test business logic without a real database? Without the enterprise-abstraction talk that makes no sense in a small team.
+
+### MVP and startup mindset
+Explicit room to cut corners where the fence is lowest — but with concrete limits on what's never acceptable (security, unreadable code, one-way doors taken wrong).
+
+### Feature Creep as a standalone theme
+Added as an explicit focus area: what it looks like, the cost, and concrete questions that challenge scope expansion.
+
+### Language support
+Responds automatically in the language the user writes in (Danish or English).
+
+### Stage awareness
+Advice is explicitly adapted to the Early / Growth / Scaling / Enterprise stage.
+
+### Engineering discipline (pre-startup focus)
+Added a layer of concrete engineering discipline that wasn't in the original — kept to what has value for a 1-5 person team, not corporate:
+- **Dave Farley** — software engineering as an empirical discipline, testability as a design tool, Definition of Done = deployed, CI as a discipline (trunk-based, not feature branches), DORA metrics, "we can't do CD because..." excuses
+- **Martin Fowler** — Monolith First (start simple, extract services when the pain is real), Evolutionary Architecture (incremental change, fitness functions, last responsible moment), ADRs as lightweight documents in version control
+- **Paul Graham** — Make Something People Want, Startup = Growth (startup as a search for a business model, not a building project), Do Things That Don't Scale (manual work and non-scalable user delight over premature automation)
+- **Eric Ries** — Build → Measure → Learn and validated learning as output; the central heuristic "which solution yields the most learning per development hour?" (deliberately not the MVP concept, which is already covered)
+- **Amazon / Jeff Bezos — Disagree and Commit** — make a decision and move on rather than chasing the perfect one; breaks analysis paralysis, allows progress without consensus (applies to two-way doors, not one-way)
+- **ADRs** — architecture decisions as living documents with a "revisit-by" trigger
+- **GDPR / data residency** — don't put the database in the US; a one-way door that's cheap to get right from the start and expensive to fix later
+
+Deliberately left out as corporate (no value in a pre-startup): cross-team coordination overhead, observability/on-call culture, rewrite-vs-refactor frameworks, technical debt translated for executives, the product/engineering org interface, and hiring frameworks.
+
+---
+
+## Sources
+
+### Frameworks from the original three articles
+- [One-Way vs Two-Way Doors](https://blueprints.guide/posts/one-way-vs-two-way-doors) — blueprints.guide (Bezos' decision-reversibility framework)
+- [Teknisk kviklånsgæld](https://responsen.substack.com/p/teknisk-kviklansgld) — Responsen (technical debt as a payday loan, the sprint-percentage trap)
+- [The CTO at Different Growth Stages](https://www.linkedin.com/pulse/cto-different-growth-stages-how-technical-leadership-karabedyants-turgf) — Karabedyants (the stage-awareness model)
+
+### Code quality and engineering discipline
+- Robert C. Martin — *Clean Code* and *Clean Architecture*
 - Dave Farley & Jez Humble — *Continuous Delivery*
-- Dave Farley — *Modern Software Engineering*; [davefarley.net](https://www.davefarley.net/) og [Continuous Delivery (YouTube)](https://www.youtube.com/@ContinuousDelivery)
+- Dave Farley — *Modern Software Engineering*; [davefarley.net](https://www.davefarley.net/) and [Continuous Delivery (YouTube)](https://www.youtube.com/@ContinuousDelivery)
 - [DORA / Accelerate](https://dora.dev/) — deployment frequency, lead time, MTTR, change failure rate
 
-### Arkitektur, evolution og beslutninger
+### Architecture, evolution, and decisions
 - [Jeff Bezos — 2016 Letter to Shareholders](https://www.aboutamazon.com/news/company-news/2016-letter-to-shareholders) (Disagree and Commit, two-way vs one-way doors, high-velocity decisions)
 - [Amazon Leadership Principles — Have Backbone; Disagree and Commit](https://www.amazon.jobs/content/en/our-workplace/leadership-principles)
 - [Martin Fowler — MonolithFirst](https://martinfowler.com/bliki/MonolithFirst.html)
 - [Martin Fowler — Microservice Trade-Offs](https://martinfowler.com/articles/microservice-trade-offs.html)
-- [Martin Fowler — Scaling the Practice of Architecture, Conversationally](https://martinfowler.com/articles/scaling-architecture-conversationally.html) (ADR-struktur)
-- [Building Evolutionary Architectures (Ford, Parsons, Kua) — via martinfowler.com/tags/evolutionary design](https://martinfowler.com/tags/evolutionary%20design.html) (fitness functions, inkrementel ændring)
-- [Michael Nygard — Documenting Architecture Decisions](https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions) (oprindelig ADR-artikel)
+- [Martin Fowler — Scaling the Practice of Architecture, Conversationally](https://martinfowler.com/articles/scaling-architecture-conversationally.html) (ADR structure)
+- [Building Evolutionary Architectures (Ford, Parsons, Kua) — via martinfowler.com/tags/evolutionary design](https://martinfowler.com/tags/evolutionary%20design.html) (fitness functions, incremental change)
+- [Michael Nygard — Documenting Architecture Decisions](https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions) (the original ADR article)
 - [Glen Thomas — How to Make Architectural Decisions Stick](https://blog.glen-thomas.com/architecture/2025/05/24/how-to-make-architectural-decisions-and-stick-to-them.html)
 
-### Startup-strategi og produkt
+### Startup strategy and product
 - [Paul Graham — Do Things That Don't Scale](https://paulgraham.com/ds.html)
 - [Paul Graham — Startup = Growth](https://paulgraham.com/growth.html)
-- [Paul Graham — essays (alle)](https://paulgraham.com/articles.html)
-- [Eric Ries — The Lean Startup](http://theleanstartup.com/principles) (Build → Measure → Learn, valideret læring, pivot or persevere)
+- [Paul Graham — essays (all)](https://paulgraham.com/articles.html)
+- [Eric Ries — The Lean Startup](http://theleanstartup.com/principles) (Build → Measure → Learn, validated learning, pivot or persevere)
 
 ### Compliance
-- [GDPR — data-overførsler til tredjelande (EU-Kommissionen)](https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection_en)
+- [GDPR — transfers of data to third countries (European Commission)](https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection_en)
