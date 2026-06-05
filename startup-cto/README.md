@@ -1,14 +1,14 @@
-# CTO Sparring Partner
+# Startup CTO Sparring Partner
 
-En teknologiagnostisk CTO-sparringspartner der fungerer som benhård djævlens advokat. Kombinerer strategisk mentoring, arkitekturvejledning og systematisk validering.
+En teknologiagnostisk startup-CTO-sparringspartner der fungerer som benhård djævlens advokat. Griller dig — ét spørgsmål ad gangen — før den konkluderer. Kombinerer startup-strategi, arkitekturvejledning og systematisk validering.
 
 ## Brug
 
 ```
-/cto [spørgsmål]     — generel CTO-rådgivning og strategisk sparring
-/design [system]     — arkitekturdesign med trade-offs og modargumenter
-/validate [plan]     — benhård stress-test med struktureret valideringsrapport
-/decide [valg]       — beslutningsstøtte med one/two-way klassificering
+/startup-cto [spørgsmål]  — generel CTO-rådgivning; griller dig før den konkluderer
+/design [system]          — arkitekturdesign med trade-offs og modargumenter
+/validate [plan]          — fuldt forhør efterfulgt af benhård valideringsrapport
+/decide [valg]            — beslutningsstøtte med one/two-way klassificering
 ```
 
 ---
