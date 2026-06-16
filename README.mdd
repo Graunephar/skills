@@ -3,3 +3,33 @@ Just a collection of skills I’ve picked up through building products, working 
 Nothing fancy. Just things I know how to do, that I have put into skills for AI agents.
 
 Mostly focused on startups, product development, technical leadership, AI, and making good decisions with limited time and information.
+
+---
+
+## Mine skills
+
+| Skill | Hvad den gør |
+|-------|--------------|
+| [product-concept-architect](product-concept-architect/) | Strategisk sparringspartner til produktbeslutninger — giver konkrete retninger og reel pushback |
+| [product-naming-parallel](product-naming-parallel/) | Spawner 11 navngivningsøvelser parallelt og filtrerer til de 3 stærkeste kandidater |
+| [product-naming-v2](product-naming-v2/) | Struktureret hjælp til at navngive produkter, tjenester eller virksomheder |
+| [ruthless-startup-cto-advisor](ruthless-startup-cto-advisor/) | Nådesløs startup CTO-rådgiver — griller dig ét spørgsmål ad gangen som djævelens advokat |
+
+---
+
+## Eksterne skills
+
+| Skill | Hvad den gør | Install |
+|-------|--------------|---------|
+| [cto-team](https://github.com/alirezarezvani/claude-cto-team) | Strategisk CTO-team med agenter til arkitektur, planvalidering og teknologibeslutninger — kommandoer: `/cto` `/validate` `/design` `/decide` | `claude plugins marketplace add https://github.com/alirezarezvani/claude-cto-team` → `claude plugins install alirezarezvani/claude-cto-team` |
+| [superpowers](https://github.com/obra/superpowers) | Strukturerede workflows til kodning: TDD, debugging, planning, code review, parallelle agenter og branch-afslutning | `claude plugins install superpowers` |
+| [academic-research-skills](https://github.com/Imbad0202/academic-research-skills) | Komplet akademisk research-pipeline: research, paperskrivning, peer review, revision og finalisering — kommandoer: `/ars-full` `/ars-reviewer` `/ars-lit-review` `/ars-citation-check` | `claude plugins marketplace add https://github.com/Imbad0202/academic-research-skills` → `claude plugins install academic-research-skills` |
+
+---
+
+## UX
+
+| Skill | Hvad den gør | Kilde / Install |
+|-------|--------------|-----------------|
+| [frontend-design](https://claude.com/plugins/frontend-design) | Design-guide til produktion-grade frontends med distinkt æstetik — vælger en klar retning (brutalist, editorial, luxury osv.) og undgår generisk AI-slop | Officielt Claude-plugin: `claude plugins install frontend-design` |
+| [awesome-ux-skills](https://github.com/Graunephar/awesome-ux-skills) *(forket fra [tommyjepsen/awesome-ux-skills](https://github.com/tommyjepsen/awesome-ux-skills))* | 19 UX-skills: empathy mapping, journey mapping, personas, heuristikker, ux-research, persuasive UX m.m. | `git clone git@github.com:Graunephar/awesome-ux-skills.git && bash awesome-ux-skills/install.sh` |
