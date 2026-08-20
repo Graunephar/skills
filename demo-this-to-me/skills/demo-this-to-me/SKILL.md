@@ -1,6 +1,6 @@
 ---
 name: demo-this-to-me
-description: Start this project's dev server and hand the user a link to see what was just built, asking desktop or mobile. Use when user says "demo this to me", "let me see it", or invokes /demo-this-to-me with no target. For a fixed target skip straight to /demo-this-to-me-desktop or /demo-this-to-me-mobile.
+description: Start this project's dev server and hand the user a link to see what was just built, asking desktop or mobile. Use when user says "demo this to me", "let me see it", or invokes /demo-this-to-me:demo-this-to-me with no target. For a fixed target use demo-this-to-me:desktop or demo-this-to-me:mobile.
 ---
 
 # Demo this to me

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "demo-this-to-me",
+  "description": "Start a project's dev server and hand back a demo link — desktop or mobile QR.",
+  "owner": {
+    "name": "Daniel"
+  },
+  "plugins": [
+    {
+      "name": "demo-this-to-me",
+      "description": "Start this project's dev server and hand back a link to see what was just built — desktop or mobile (ngrok + QR).",
+      "source": "./",
+      "category": "productivity"
+    }
+  ]
+}

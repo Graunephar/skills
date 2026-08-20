@@ -24,7 +24,7 @@ curl -s http://127.0.0.1:4040/api/tunnels | grep -o 'https://[a-z0-9.-]*ngrok[a-
 ```
 Take the `https://...ngrok...` URL, append the relevant path from step 3.
 ```bash
-scripts/qr.sh "<tunnel-url>/<path>" /tmp/demo-qr.png
+"${CLAUDE_PLUGIN_ROOT}/scripts/qr.sh" "<tunnel-url>/<path>" /tmp/demo-qr.png
 ```
 Print the ANSI QR straight into the chat reply (terminal renders it), and send the PNG with `SendUserFile` (`display: "render"`) so it also shows as an image.
 

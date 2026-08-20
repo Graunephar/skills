@@ -1,0 +1,8 @@
+{
+  "name": "demo-this-to-me",
+  "description": "Start this project's dev server and hand back a link to see what was just built — desktop or mobile (ngrok + QR).",
+  "version": "1.0.0",
+  "author": {
+    "name": "Daniel"
+  }
+}
