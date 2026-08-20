@@ -11,14 +11,16 @@ Daniel's end-of-session ritual: PR's accepted, he's about to close/archive the s
 
 1. **Kill what this session started.** Any dev server / ngrok tunnel / preview_start server / background Bash job (`run_in_background`) launched during this conversation — stop it. Check for a still-running process before declaring done (`jobs`, or the PID/port you started it on). Don't touch unrelated processes on the machine.
 
-2. **Check for unfinished work.**
-   - `git status` in the worktree — anything uncommitted or unstaged? If so, tell the user before doing anything else; never discard it, never auto-commit it.
-   - `git status` clean + PR mentioned as accepted → proceed.
+2. **Check for unfinished work.** `git status` in the worktree — check it regardless of what this conversation remembers doing; work can land there from another session too. If clean, skip to step 3.
+   If NOT clean, **ask** (don't assume, don't discard, don't auto-commit):
+   - Commit it now (get a message from him, or draft one from the diff and confirm)
+   - Stash it
+   - Leave the worktree as-is, uncleaned, for later
+   Whatever he picks, don't remove the worktree until it reflects his answer (committed/stashed, or "leave it" → skip step 3 entirely).
 
 3. **Close the worktree, if this session is in one.**
    - Confirm it actually IS a worktree (`git rev-parse --git-common-dir` differs from `--git-dir`, or check the path for a `worktrees/` segment / `.claude/worktrees/`).
-   - `git worktree remove <path>` — safe to do unprompted here specifically because the user just said the session is ending and the PR is accepted (this is the standing exception: worktree cleanup needs no extra ask when the session is finished and the path is a claude-managed worktree).
-   - If `git status` in step 2 wasn't clean, do NOT remove the worktree — say why, and stop there instead.
+   - `git worktree remove <path>` — safe to do unprompted here specifically because the user just said the session is ending and the PR is accepted, and step 2 has already resolved anything uncommitted (this is the standing exception: worktree cleanup needs no extra ask once the session is finished, the tree is clean, and the path is a claude-managed worktree).
 
 4. **Never merge the PR, never push, never touch main.** "Accepted" means the human merges it. Your job here is purely local cleanup.
 
