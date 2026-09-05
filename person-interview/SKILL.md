@@ -101,15 +101,17 @@ series: <navn (del N af M)>   # udelad hvis enkeltstående
 interviewed: <YYYY-MM-DD>
 language: <da | en>
 status: <draft | klar til udgivelse — plus evt. udestående samtykke>
-interviewer: Claude (<model>), via person-interview-skillen
-skill: https://github.com/Graunephar/skills/tree/master/person-interview
+interviewer: Claude (<model>)
+skill: person-interview
+skill_url: https://github.com/Graunephar/skills/tree/master/person-interview
 ---
 ```
 
 `status` er stedet hvor udestående samtykke står, indtil det er hentet — fx
 "draft — mangler Xs ja til at blive nævnt".
 
-`interviewer` og `skill` udfyldes altid: modelnavn, og link til denne skill.
+`interviewer`, `skill` og `skill_url` udfyldes altid: modelnavn, skillens navn,
+og link til den.
 Læseren skal kunne se hvordan teksten er blevet til, og hvor metoden kommer fra.
 Felterne bliver stående i filen — de klippes først når teksten sættes op til
 udgivelse et sted der ikke bruger frontmatter.
