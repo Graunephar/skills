@@ -87,6 +87,28 @@ Q&A som standard. Portræt i prosa hvis brugeren beder om det. Personens sprog o
 - **Ingen AI-fluff**: ingen "i dette opslag deler jeg", ingen emoji-bullets, ingen "hvad tænker du? 👇" med mindre der bedes om det.
 - **Læs det tilbage.** Spørg eksplicit: lyder det som dig — eller som mig der skriver som dig?
 
+### Frontmatter — altid
+
+Hvert udkast starter med YAML-frontmatter. Interviewer krediteres, ikke forfatter:
+personen har sagt ordene, du har kun spurgt og klippet.
+
+```yaml
+---
+title: "<samme som overskriften — det bedste citat>"
+subject: <navn>
+role: <titel, virksomhed>
+series: <navn (del N af M)>   # udelad hvis enkeltstående
+interviewed: <YYYY-MM-DD>
+language: <da | en>
+status: <draft | klar til udgivelse — plus evt. udestående samtykke>
+interviewer: Claude (<model>), via person-interview-skillen
+skill: https://github.com/Graunephar/skills/tree/master/person-interview
+---
+```
+
+`status` er stedet hvor udestående samtykke står, indtil det er hentet — fx
+"draft — mangler Xs ja til at blive nævnt".
+
 ## Serie
 
 Flere personer: hold **to spørgsmål ens** på tværs, så portrætterne kan læses op mod hinanden, resten personlige. Foreslå hvilke to, og noter dem i `serie.md` ved siden af udkastet.
