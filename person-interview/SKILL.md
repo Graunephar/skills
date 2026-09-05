@@ -109,6 +109,11 @@ skill: https://github.com/Graunephar/skills/tree/master/person-interview
 `status` er stedet hvor udestående samtykke står, indtil det er hentet — fx
 "draft — mangler Xs ja til at blive nævnt".
 
+`interviewer` og `skill` udfyldes altid: modelnavn, og link til denne skill.
+Læseren skal kunne se hvordan teksten er blevet til, og hvor metoden kommer fra.
+Felterne bliver stående i filen — de klippes først når teksten sættes op til
+udgivelse et sted der ikke bruger frontmatter.
+
 ## Serie
 
 Flere personer: hold **to spørgsmål ens** på tværs, så portrætterne kan læses op mod hinanden, resten personlige. Foreslå hvilke to, og noter dem i `serie.md` ved siden af udkastet.
